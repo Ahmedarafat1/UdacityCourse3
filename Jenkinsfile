@@ -18,7 +18,7 @@ pipeline {
                 
          stage('Upload to AWS') {
               steps {
-                  withAWS(region:'us-west-2',credentials:'aws-arafat') {
+                  withAWS(region:'us-west-2',credentials:'blueocean') {
                   sh 'echo "Uploading content with AWS creds"'
                       s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'udacity-project2-arafat')
                   }
