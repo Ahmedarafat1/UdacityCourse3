@@ -21,7 +21,7 @@ pipeline {
                   withAWS(region:'us-west-2',credentials:'arafat') {
                   sh 'echo "Uploading content with AWS creds"'
                   s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'udacity-project3-arafat')
-                  }
+                }
               }
          }
      }
